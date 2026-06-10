@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Policy Observer - Multilateralism & Strategic Governance Intelligence Archive. Diplomatic analysis and policy insights.">
+    <meta name="keywords" content="diplomacy, policy, governance, international relations, analysis">
+    <meta name="author" content="HanaMi">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <title>Global Policy Observer | Diplomatic Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <!-- Author Modal -->
+    <div id="authorModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>👤 Tên tác giả</h2>
+            <p>Vui lòng nhập tên của bạn để bắt đầu:</p>
+            <input 
+                type="text" 
+                id="authorInput" 
+                class="modal-input" 
+                placeholder="Tên của bạn..." 
+                maxlength="50"
+            >
+            <button type="button" id="btnConfirmAuthor" class="modal-btn">Xác nhận</button>
+        </div>
+    </div>
+
+    <div id="google_translate_element-label">
+        <span style="font-weight: 500; color: #1c0485;">🌐 Dịch sang: </span>
+    </div>
+    <div id="google_translate_element"></div>
+
+    <div class="container">
+        <header>
+            <img src="./logo.svg" alt="Global Policy Observer Logo" class="logo">
+            <h1>Global Policy Observer</h1>
+            <div class="tagline">Multilateralism &amp; Strategic Governance Intelligence Archive</div>
+        </header>
+
+        <div class="feed-toolbar">
+            <button
+                type="button"
+                id="btnToggleCompose"
+                class="btn-open-compose"
+                aria-expanded="false"
+                aria-controls="composePanel"
+            >
+                Đăng bài viết
+            </button>
+        </div>
+
+        <!-- Search & Filter Section -->
+        <div class="search-filter-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="🔍 Tìm kiếm bài viết..." 
+                    aria-label="Search posts"
+                >
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-header">
+                    <span class="filter-label">📂 Lọc theo chủ đề:</span>
+                    <button type="button" id="btnClearFilter" class="btn-clear-filter">Xóa bộ lọc</button>
+                </div>
+                <div class="category-tags" id="categoryTags">
+                    <button type="button" class="category-tag active" data-category="all">Tất cả</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="composePanel" class="compose-panel" aria-label="Form đăng bài" hidden>
+            <p class="compose-intro">
+                Chia sẻ bài phân tích hoặc tin tức. Chỉ bạn mới có thể xóa bài viết của mình.
+            </p>
+            <div class="compose-panel-head">
+                <h2 class="compose-panel-title">Tin mới</h2>
+                <button type="button" id="btnCloseCompose" class="btn-close-compose">Đóng</button>
+            </div>
+            <label class="visually-hidden" for="categoryInput">Chủ đề</label>
+            <select id="categoryInput">
+                <option value="Ngoại giao nước">Ngoại giao nước</option>
+                <option value="An ninh toàn cầu">An ninh toàn cầu</option>
+                <option value="Cải cách Liên Hiệp Quốc">Cải cách Liên Hiệp Quốc</option>
+                <option value="Nhân quyền">Nhân quyền</option>
+                <option value="Thương mại quốc tế">Thương mại quốc tế</option>
+                <option value="Môi trường & Khí hậu">Môi trường & Khí hậu</option>
+                <option value="Phát triển kinh tế">Phát triển kinh tế</option>
+                <option value="Y tế toàn cầu">Y tế toàn cầu</option>
+                <option value="Lao động & Di cư">Lao động & Di cư</option>
+                <option value="Công nghệ & Đổi mới">Công nghệ & Đổi mới</option>
+                <option value="Giáo dục & Văn hóa">Giáo dục & Văn hóa</option>
+            </select>
+            <label class="visually-hidden" for="statusInput">Nội dung</label>
+            <textarea id="statusInput" placeholder="Bắt đầu phân tích..." rows="6"></textarea>
+            <button type="button" id="btnPost" class="btn-post">Xuất bản tin</button>
+        </section>
+
+        <div id="loading" class="loading">Connecting to archive...</div>
+        <div id="feed"></div>
+    </div>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>About Global Policy Observer</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">🌍</div>
+                    <h3>Multilateralism Archive</h3>
+                    <p>A collaborative platform for sharing diplomatic analysis and policy insights on international governance and strategic relationships.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📊</div>
+                    <h3>Open Intelligence</h3>
+                    <p>Community-driven observations on trade, environment, security, and development. Multiple perspectives on global affairs.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🔐</div>
+                    <h3>Secure & Transparent</h3>
+                    <p>Timestamped posts, categorized by topic, with full audit trails. Curated by HanaMi for policy professionals worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Global Policy Observer. Curated by <strong>HanaMi</strong> | <a href="./SECURITY.md" target="_blank">Security</a> | <a href="./README.md" target="_blank">About</a></p>
+            <p class="footer-tagline">Diplomatic Intelligence Archive | Community-Driven Multilateralism Platform</p>
+            <p class="footer-info">A collaborative space for policy analysis. Posts are timestamped and publicly accessible. <em>No claims of ownership or authority.</em></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./config.js"></script>
+    <script src="./main.js" defer></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>

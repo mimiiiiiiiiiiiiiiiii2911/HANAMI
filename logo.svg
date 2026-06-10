@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="gradGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6c27f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1ba6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1c0485;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="58" fill="none" stroke="url(#gradGold)" stroke-width="2.5" filter="url(#shadow)"/>
+  
+  <!-- Inner decorative ring -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="url(#gradNavy)" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Main globe circle -->
+  <circle cx="60" cy="60" r="38" fill="url(#gradNavy)" opacity="0.08"/>
+  
+  <!-- Globe grid lines -->
+  <ellipse cx="60" cy="60" rx="38" ry="14" fill="none" stroke="url(#gradGold)" stroke-width="1.8" opacity="0.7"/>
+  <line x1="22" y1="60" x2="98" y2="60" stroke="url(#gradGold)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="60" y1="22" x2="60" y2="98" stroke="url(#gradGold)" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Diagonal lines for sophistication -->
+  <line x1="35" y1="35" x2="85" y2="85" stroke="url(#gradGold)" stroke-width="1" opacity="0.3"/>
+  <line x1="85" y1="35" x2="35" y2="85" stroke="url(#gradGold)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Central compass point -->
+  <circle cx="60" cy="60" r="6" fill="url(#gradGold)" filter="url(#shadow)"/>
+  
+  <!-- Four cardinal direction nodes -->
+  <circle cx="88" cy="60" r="4.5" fill="url(#gradGold)" opacity="0.9"/>
+  <circle cx="32" cy="60" r="4.5" fill="url(#gradGold)" opacity="0.9"/>
+  <circle cx="60" cy="32" r="4.5" fill="url(#gradGold)" opacity="0.9"/>
+  <circle cx="60" cy="88" r="4.5" fill="url(#gradGold)" opacity="0.9"/>
+  
+  <!-- Diagonal direction nodes -->
+  <circle cx="78" cy="42" r="3" fill="url(#gradGold)" opacity="0.7"/>
+  <circle cx="42" cy="78" r="3" fill="url(#gradGold)" opacity="0.7"/>
+  <circle cx="78" cy="78" r="3" fill="url(#gradGold)" opacity="0.7"/>
+  <circle cx="42" cy="42" r="3" fill="url(#gradGold)" opacity="0.7"/>
+  
+  <!-- Connection lines to cardinal nodes -->
+  <line x1="60" y1="60" x2="88" y2="60" stroke="url(#gradGold)" stroke-width="1.2" opacity="0.4"/>
+  <line x1="60" y1="60" x2="32" y2="60" stroke="url(#gradGold)" stroke-width="1.2" opacity="0.4"/>
+  <line x1="60" y1="60" x2="60" y2="32" stroke="url(#gradGold)" stroke-width="1.2" opacity="0.4"/>
+  <line x1="60" y1="60" x2="60" y2="88" stroke="url(#gradGold)" stroke-width="1.2" opacity="0.4"/>
+  
+  <!-- Subtle accent triangles at top -->
+  <polygon points="60,18 65,28 55,28" fill="url(#gradGold)" opacity="0.6" filter="url(#shadow)"/>
+</svg>
